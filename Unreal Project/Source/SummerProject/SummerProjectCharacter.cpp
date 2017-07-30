@@ -81,6 +81,8 @@ ASummerProjectCharacter::ASummerProjectCharacter()
 
 	// Uncomment the following line to turn motion controllers on by default:
 	//bUsingMotionControllers = true;
+
+	//Set up dust trail particle emitter
 }
 
 void ASummerProjectCharacter::BeginPlay()

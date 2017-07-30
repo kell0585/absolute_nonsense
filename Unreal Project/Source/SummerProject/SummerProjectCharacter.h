@@ -45,6 +45,10 @@ class ASummerProjectCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class UMotionControllerComponent* L_MotionController;
 
+	//Dust trail Particle Emitter
+	//UProperty(EditAnywhere, BlueprintReadWrite, Category = Effects)
+	//TSubobjectPtr<class UParticleSystemComponent> dustTrail;
+
 public:
 	ASummerProjectCharacter();
 
@@ -105,6 +109,9 @@ protected:
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
 	void LookUpAtRate(float Rate);
+
+	// Spawn particle emitters with dust behind player while they are walking
+	void SpawnDustTrail();
 
 	struct TouchData
 	{
